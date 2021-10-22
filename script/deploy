@@ -1,5 +1,5 @@
 #!/bin/sh
-ssh -p 52014 dev@218.232.7.30 <<EOF
+ssh -t -t -p 52014 dev@218.232.7.30 <<EOF
     cd ~/test/sample-project		
     git pull origin master
     npm install
