@@ -6,6 +6,8 @@ ssh -t -t -p 52014 dev@218.232.7.30 <<EOF
     sudo npm i -g @nestjs/cli
     sudo npm install -g pm2 typescript ts-node
     sudo pm2 install typescript
+    sudo pm2 list
+    sudo pm2 kill
     sudo pm2 start dist/main.js
     exit
 EOF
