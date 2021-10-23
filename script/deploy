@@ -2,12 +2,14 @@
 ssh -t -t -p 52014 dev@218.232.7.30 <<EOF
     cd ~/test/sample-project		
     git pull origin master
-    sudo npm install
+    curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.8/install.sh | bash . ~/.nvm/nvm.sh
+    nvm install 16.2.0
+    npm install
     sudo npm i -g @nestjs/cli
-    sudo npm install -g pm2 typescript ts-node
-    sudo pm2 install typescript
-    sudo pm2 list
-    sudo pm2 kill
-    sudo pm2 start dist/main.js
+    sudo npm i -g pm2 typescript ts-node
+    pm2 install typescript
+    pm2 list
+    pm2 kill
+    pm2 start dist/main.js
     exit
 EOF
