@@ -1,6 +1,7 @@
 #!/bin/sh
-ssh -t -t -p 8070 root@218.232.7.30 <<EOF
+<<EOF
     cd /home/node
+    git pull origin master
     npm install
     npm i -g @nestjs/cli
     npm i -g pm2 typescript ts-node
