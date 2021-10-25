@@ -1,6 +1,5 @@
 #!/bin/sh
 <<EOF
-    cd /home/node
     git pull origin master
     npm install
     npm i -g @nestjs/cli
